@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class EmployeeCard extends Component {
 	render() {
@@ -6,12 +6,12 @@ class EmployeeCard extends Component {
 			<div className='card'>
 				<div className='card-content'>
 					<picture>
-						<img src={require('./5.png')} alt='Employee' />
+						<img src={require("./5.png")} alt='Employee' />
 					</picture>
 					<h3>
-						Employee: <span className='card-employeename'>Steve</span>
+						Employee: <span className='card-employeename'>{this.props.employee.name}</span>
 					</h3>
-					<p>Hair Style: Lame</p>
+					<p>favorite breed: {this.props.employee.breed}</p>
 				</div>
 			</div>
 		);

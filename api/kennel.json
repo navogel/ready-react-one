@@ -3,5 +3,20 @@
 		{ "id": 1, "name": "Doodles", "breed": "Poodle" },
 		{ "id": 2, "name": "Decker", "breed": "German Sheperd" },
 		{ "id": 3, "name": "Esme", "breed": "Pitbull" }
+	],
+	"employees": [
+		{ "id": 1, "name": "Steve", "breed": "Poodle" },
+		{ "id": 2, "name": "Sam", "breed": "German Sheperd" },
+		{ "id": 3, "name": "Sue", "breed": "Pitbull" }
+	],
+	"owners": [
+		{ "id": 1, "name": "Pony Tail", "breed": "Poodle" },
+		{ "id": 2, "name": "K9", "breed": "German Sheperd" },
+		{ "id": 3, "name": "Will", "breed": "Husky" }
+	],
+	"locations": [
+		{ "id": 1, "name": "E Nashville", "breed": "Doge" },
+		{ "id": 2, "name": "Downtown", "breed": "Lassie" },
+		{ "id": 3, "name": "Alaska", "breed": "Gus" }
 	]
 }
