@@ -6,6 +6,7 @@ import AnimalList from "./animal/AnimalList";
 import LocationList from "./location/LocationList";
 import EmployeeList from "./employee/EmployeeList";
 import OwnerList from "./owner/OwnerList";
+import AnimalDetail from "./animal/AnimalDetail";
 
 class ApplicationViews extends Component {
 	render() {
@@ -19,6 +20,7 @@ class ApplicationViews extends Component {
 					}}
 				/>
 				<Route
+					exact
 					path='/animals'
 					render={props => {
 						return <AnimalList />;
@@ -40,6 +42,12 @@ class ApplicationViews extends Component {
 					path='/locations'
 					render={props => {
 						return <LocationList />;
+					}}
+				/>
+				<Route
+					path='/animals/:animalId(\d+)'
+					render={props => {
+						return <AnimalDetail animalId={parseInt(props.match.params.animalId)} />;
 					}}
 				/>
 			</React.Fragment>
