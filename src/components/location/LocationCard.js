@@ -10,6 +10,9 @@ class LocationCard extends Component {
 						City: <span className='card-location'>{this.props.location.name}</span>
 					</h3>
 					<p>Most popular breed: {this.props.location.breed}</p>
+					<button type='button' onClick={() => this.props.deleteLocation(this.props.location.id)}>
+						BURN IT DOWN
+					</button>
 				</div>
 			</div>
 		);
