@@ -12,6 +12,9 @@ class OwnerCard extends Component {
 						Owner: <span className='card-ownerename'>{this.props.owner.name}</span>
 					</h3>
 					<p>Hair Style: Ok</p>
+					<button type='button' onClick={() => this.props.deleteOwner(this.props.owner.id)}>
+						GHOST OWNER, STEAL DOG
+					</button>
 				</div>
 			</div>
 		);

@@ -10,6 +10,16 @@ class OwnerList extends Component {
 		owners: []
 	};
 
+	deleteOwner = id => {
+		OwnerManager.delete(id).then(() => {
+			OwnerManager.getAll().then(data => {
+				this.setState({
+					owners: data
+				});
+			});
+		});
+	};
+
 	componentDidMount() {
 		console.log("OWNER LIST: ComponentDidMount");
 		//getAll from OwnerManager and hang on to that data; put it in state
@@ -26,7 +36,7 @@ class OwnerList extends Component {
 		return (
 			<div className='container-cards'>
 				{this.state.owners.map(owner => (
-					<OwnerCard key={owner.id} owner={owner} />
+					<OwnerCard key={owner.id} owner={owner} deleteOwner={this.deleteOwner} />
 				))}
 			</div>
 		);
