@@ -1,12 +1,13 @@
-import { Route } from "react-router-dom";
-import React, { Component } from "react";
-import Home from "./home/Home";
-import AnimalList from "./animal/AnimalList";
-//only include these once they are built - previous practice exercise
-import LocationList from "./location/LocationList";
-import EmployeeList from "./employee/EmployeeList";
-import OwnerList from "./owner/OwnerList";
-import AnimalDetail from "./animal/AnimalDetail";
+import { Route } from 'react-router-dom';
+import React, { Component } from 'react';
+import Home from './home/Home';
+import AnimalList from './animal/AnimalList';
+import LocationList from './location/LocationList';
+import EmployeeList from './employee/EmployeeList';
+import OwnerList from './owner/OwnerList';
+import AnimalDetail from './animal/AnimalDetail';
+import LocationDetail from './location/LocationDetail';
+import AnimalForm from './animal/AnimalForm';
 
 class ApplicationViews extends Component {
 	render() {
@@ -23,7 +24,7 @@ class ApplicationViews extends Component {
 					exact
 					path='/animals'
 					render={props => {
-						return <AnimalList />;
+						return <AnimalList {...props} />;
 					}}
 				/>
 				<Route
@@ -39,15 +40,33 @@ class ApplicationViews extends Component {
 					}}
 				/>
 				<Route
+					exact
 					path='/locations'
 					render={props => {
 						return <LocationList />;
 					}}
 				/>
+
 				<Route
 					path='/animals/:animalId(\d+)'
 					render={props => {
-						return <AnimalDetail animalId={parseInt(props.match.params.animalId)} />;
+						console.log(props, parseInt(props.match.params.animalId));
+						// Pass the animalId to the AnimalDetailComponent
+						return <AnimalDetail animalId={parseInt(props.match.params.animalId)} {...props} />;
+					}}
+				/>
+				<Route
+					path='/locations/:locationId(\d+)'
+					render={props => {
+						console.log(props, parseInt(props.match.params.locationId));
+						// Pass the animalId to the AnimalDetailComponent
+						return <LocationDetail locationId={parseInt(props.match.params.locationId)} {...props} />;
+					}}
+				/>
+				<Route
+					path='/animals/new'
+					render={props => {
+						return <AnimalForm {...props} />;
 					}}
 				/>
 			</React.Fragment>

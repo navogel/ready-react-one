@@ -1,22 +1,73 @@
 {
-	"animals": [
-		{ "id": 1, "name": "Doodles", "breed": "Poodle" },
-		{ "id": 2, "name": "Decker", "breed": "German Sheperd" },
-		{ "id": 3, "name": "Esme", "breed": "Pitbull" }
-	],
-	"employees": [
-		{ "id": 1, "name": "Steve", "breed": "Poodle" },
-		{ "id": 2, "name": "Sam", "breed": "German Sheperd" },
-		{ "id": 3, "name": "Sue", "breed": "Pitbull" }
-	],
-	"owners": [
-		{ "id": 1, "name": "Pony Tail", "breed": "Poodle", "animalId": 1 },
-		{ "id": 2, "name": "K9", "breed": "German Sheperd", "animalId": 2 },
-		{ "id": 3, "name": "Will", "breed": "Husky", "animalId": 3 }
-	],
-	"locations": [
-		{ "id": 1, "name": "E Nashville", "breed": "hip dogs" },
-		{ "id": 2, "name": "Downtown", "breed": "underwalked dogs" },
-		{ "id": 3, "name": "Alaska", "breed": "lifeguard dogs" }
-	]
+  "animals": [
+    {
+      "id": 1,
+      "name": "doodles",
+      "breed": "Poodle"
+    },
+    {
+      "id": 2,
+      "name": "Decker",
+      "breed": "German Sheperd"
+    },
+    {
+      "id": 3,
+      "name": "esme",
+      "breed": "Pitbull"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Steve",
+      "breed": "Poodle"
+    },
+    {
+      "id": 2,
+      "name": "Sam",
+      "breed": "German Sheperd"
+    },
+    {
+      "id": 3,
+      "name": "Sue",
+      "breed": "Pitbull"
+    }
+  ],
+  "owners": [
+    {
+      "id": 1,
+      "name": "Pony Tail",
+      "breed": "Poodle",
+      "animalId": 1
+    },
+    {
+      "id": 2,
+      "name": "K9",
+      "breed": "German Sheperd",
+      "animalId": 2
+    },
+    {
+      "id": 3,
+      "name": "Will",
+      "breed": "Husky",
+      "animalId": 3
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "E Nashville",
+      "breed": "hip dogs"
+    },
+    {
+      "id": 2,
+      "name": "Downtown",
+      "breed": "underwalked dogs"
+    },
+    {
+      "id": 3,
+      "name": "Alaska",
+      "breed": "lifeguard dogs"
+    }
+  ]
 }
