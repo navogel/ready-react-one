@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 //import the components we will need
-import EmployeeCard from "./EmployeeCard";
-import EmployeeManager from "../../modules/EmployeeManager";
+import EmployeeCard from './EmployeeCard';
+import EmployeeManager from '../../modules/EmployeeManager';
 // import "./employee.css";
 
 class EmployeeList extends Component {
@@ -21,7 +21,7 @@ class EmployeeList extends Component {
 	};
 
 	componentDidMount() {
-		console.log("EMPLOYEE LIST: ComponentDidMount");
+		console.log('EMPLOYEE LIST: ComponentDidMount');
 		//getAll from EmployeeManager and hang on to that data; put it in state
 		EmployeeManager.getAll().then(employees => {
 			this.setState({
@@ -31,7 +31,7 @@ class EmployeeList extends Component {
 	}
 
 	render() {
-		console.log("EMPLOYEE LIST: Render");
+		console.log('EMPLOYEE LIST: Render');
 
 		return (
 			<div className='container-cards'>
@@ -40,6 +40,7 @@ class EmployeeList extends Component {
 						key={employee.id}
 						employee={employee}
 						deleteEmployee={this.deleteEmployee}
+						{...this.props}
 					/>
 				))}
 			</div>

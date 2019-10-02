@@ -10,6 +10,8 @@ import LocationDetail from './location/LocationDetail';
 import AnimalForm from './animal/AnimalForm';
 import Login from './auth/login';
 import AnimalEditForm from './animal/AnimalEditForm';
+import EmployeeEditForm from './employee/EmployeeEditForm';
+import OwnerEditForm from './owner/OwnerEditForm';
 
 class ApplicationViews extends Component {
 	//check for login before showing content
@@ -41,20 +43,22 @@ class ApplicationViews extends Component {
 					}}
 				/>
 				<Route
+					exact
 					path='/owners'
 					render={props => {
 						if (this.isAuthenticated()) {
-							return <OwnerList />;
+							return <OwnerList {...props} />;
 						} else {
 							return <Redirect to='/login' />;
 						}
 					}}
 				/>
 				<Route
+					exact
 					path='/employees'
 					render={props => {
 						if (this.isAuthenticated()) {
-							return <EmployeeList />;
+							return <EmployeeList {...props} />;
 						} else {
 							return <Redirect to='/login' />;
 						}
@@ -65,7 +69,7 @@ class ApplicationViews extends Component {
 					path='/locations'
 					render={props => {
 						if (this.isAuthenticated()) {
-							return <LocationList />;
+							return <LocationList {...props} />;
 						} else {
 							return <Redirect to='/login' />;
 						}
@@ -77,7 +81,12 @@ class ApplicationViews extends Component {
 					render={props => {
 						if (this.isAuthenticated()) {
 							// Pass the animalId to the AnimalDetailComponent
-							return <AnimalDetail animalId={parseInt(props.match.params.animalId)} {...props} />;
+							return (
+								<AnimalDetail
+									animalId={parseInt(props.match.params.animalId)}
+									{...props}
+								/>
+							);
 						} else {
 							return <Redirect to='/login' />;
 						}
@@ -88,7 +97,12 @@ class ApplicationViews extends Component {
 					render={props => {
 						if (this.isAuthenticated()) {
 							// Pass the animalId to the AnimalDetailComponent
-							return <LocationDetail locationId={parseInt(props.match.params.locationId)} {...props} />;
+							return (
+								<LocationDetail
+									locationId={parseInt(props.match.params.locationId)}
+									{...props}
+								/>
+							);
 						} else {
 							return <Redirect to='/login' />;
 						}
@@ -109,6 +123,26 @@ class ApplicationViews extends Component {
 					render={props => {
 						if (this.isAuthenticated()) {
 							return <AnimalEditForm {...props} />;
+						} else {
+							return <Redirect to='/login' />;
+						}
+					}}
+				/>
+				<Route
+					path='/employees/:employeeId(\d+)/edit'
+					render={props => {
+						if (this.isAuthenticated()) {
+							return <EmployeeEditForm {...props} />;
+						} else {
+							return <Redirect to='/login' />;
+						}
+					}}
+				/>
+				<Route
+					path='/owners/:ownerId(\d+)/edit'
+					render={props => {
+						if (this.isAuthenticated()) {
+							return <OwnerEditForm {...props} />;
 						} else {
 							return <Redirect to='/login' />;
 						}

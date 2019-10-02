@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 //import the components we will need
-import OwnerCard from "./OwnerCard";
-import OwnerManager from "../../modules/OwnerManager";
+import OwnerCard from './OwnerCard';
+import OwnerManager from '../../modules/OwnerManager';
 // import "./owner.css";
 
 class OwnerList extends Component {
@@ -21,7 +21,7 @@ class OwnerList extends Component {
 	};
 
 	componentDidMount() {
-		console.log("OWNER LIST: ComponentDidMount");
+		console.log('OWNER LIST: ComponentDidMount');
 		//getAll from OwnerManager and hang on to that data; put it in state
 		OwnerManager.getAll().then(owners => {
 			this.setState({
@@ -31,12 +31,17 @@ class OwnerList extends Component {
 	}
 
 	render() {
-		console.log("OWNER LIST: Render");
+		console.log('OWNER LIST: Render');
 
 		return (
 			<div className='container-cards'>
 				{this.state.owners.map(owner => (
-					<OwnerCard key={owner.id} owner={owner} deleteOwner={this.deleteOwner} />
+					<OwnerCard
+						key={owner.id}
+						owner={owner}
+						deleteOwner={this.deleteOwner}
+						{...this.props}
+					/>
 				))}
 			</div>
 		);

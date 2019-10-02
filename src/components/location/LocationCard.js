@@ -7,15 +7,26 @@ class LocationCard extends Component {
 		return (
 			<div className='card'>
 				<div className='card-content'>
-					<picture>{/* <img src={require('./5.png')} alt='Location' /> */}</picture>
+					<picture>
+						<img
+							src={require(`../../images/locations/${this.props.local.image}`)}
+							alt='My location'
+						/>
+					</picture>
 					<h3>
-						City: <span className='card-location'>{firstLetterCase(this.props.location.name)}</span>
+						City:{' '}
+						<span className='card-location'>
+							{firstLetterCase(this.props.local.name)}
+						</span>
 					</h3>
-					<p>Most popular breed: {this.props.location.breed}</p>
-					<button type='button' onClick={() => this.props.deleteLocation(this.props.location.id)}>
+					<p>Most popular breed: {this.props.local.breed}</p>
+					<button
+						type='button'
+						onClick={() => this.props.deleteLocation(this.props.local.id)}
+					>
 						BURN IT DOWN
 					</button>
-					<Link to={`/locations/${this.props.location.id}`}>
+					<Link to={`/locations/${this.props.local.id}`}>
 						<button>Details</button>
 					</Link>
 				</div>

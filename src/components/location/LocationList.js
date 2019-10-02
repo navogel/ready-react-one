@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 //import the components we will need
-import LocationCard from "./LocationCard";
-import LocationManager from "../../modules/LocationManager";
+import LocationCard from './LocationCard';
+import LocationManager from '../../modules/LocationManager';
 // import "./location.css";
 
 class LocationList extends Component {
@@ -21,7 +21,7 @@ class LocationList extends Component {
 	};
 
 	componentDidMount() {
-		console.log("LOCATION LIST: ComponentDidMount");
+		console.log('LOCATION LIST: ComponentDidMount');
 		//getAll from LocationManager and hang on to that data; put it in state
 		LocationManager.getAll().then(locations => {
 			this.setState({
@@ -31,14 +31,14 @@ class LocationList extends Component {
 	}
 
 	render() {
-		console.log("LOCATION LIST: Render");
+		console.log('LOCATION LIST: Render');
 
 		return (
 			<div className='container-cards'>
 				{this.state.locations.map(location => (
 					<LocationCard
 						key={location.id}
-						location={location}
+						local={location}
 						deleteLocation={this.deleteLocation}
 					/>
 				))}

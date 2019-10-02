@@ -10,7 +10,7 @@
       "id": 2,
       "name": "Decker",
       "breed": "German Sheperd",
-      "image": "1.jpg"
+      "image": "4.jpg"
     },
     {
       "id": 3,
@@ -47,17 +47,20 @@
     {
       "id": 1,
       "name": "Steve",
-      "breed": "Poodle"
+      "breed": "Poodle",
+      "image": "1.png"
     },
     {
       "id": 2,
       "name": "Sam",
-      "breed": "German Sheperd"
+      "breed": "German Sheperd",
+      "image": "1.png"
     },
     {
       "id": 3,
       "name": "Sue",
-      "breed": "Pitbull"
+      "breed": "Pitbull",
+      "image": "1.png"
     }
   ],
   "owners": [
@@ -65,36 +68,39 @@
       "id": 1,
       "name": "Pony Tail",
       "breed": "Poodle",
-      "animalId": 1
+      "image": "2.png"
     },
     {
       "id": 2,
-      "name": "K9",
+      "name": "K10",
       "breed": "German Sheperd",
-      "animalId": 2
+      "image": "2.png"
     },
     {
       "id": 3,
       "name": "Will",
       "breed": "Husky",
-      "animalId": 3
+      "image": "2.png"
     }
   ],
   "locations": [
     {
       "id": 1,
       "name": "E Nashville",
-      "breed": "hip dogs"
+      "breed": "hip dogs",
+      "image": "1.jpg"
     },
     {
       "id": 2,
       "name": "Downtown",
-      "breed": "underwalked dogs"
+      "breed": "underwalked dogs",
+      "image": "1.jpg"
     },
     {
       "id": 3,
       "name": "Alaska",
-      "breed": "lifeguard dogs"
+      "breed": "lifeguard dogs",
+      "image": "1.jpg"
     }
   ]
 }

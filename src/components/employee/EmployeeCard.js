@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class EmployeeCard extends Component {
 	render() {
@@ -6,14 +6,33 @@ class EmployeeCard extends Component {
 			<div className='card'>
 				<div className='card-content'>
 					<picture>
-						<img src={require("./5.png")} alt='Employee' />
+						<img
+							src={require(`../../images/employees/${this.props.employee.image}`)}
+							alt='My Employee'
+						/>
 					</picture>
 					<h3>
-						Employee: <span className='card-employeename'>{this.props.employee.name}</span>
+						Employee:{' '}
+						<span className='card-employeename'>
+							{this.props.employee.name}
+						</span>
 					</h3>
 					<p>favorite breed: {this.props.employee.breed}</p>
-					<button type='button' onClick={() => this.props.deleteEmployee(this.props.employee.id)}>
+					<button
+						type='button'
+						onClick={() => this.props.deleteEmployee(this.props.employee.id)}
+					>
 						FIRE THEM
+					</button>
+					<button
+						type='button'
+						onClick={() => {
+							this.props.history.push(
+								`/employees/${this.props.employee.id}/edit`
+							);
+						}}
+					>
+						Edit
 					</button>
 				</div>
 			</div>
