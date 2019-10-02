@@ -1,4 +1,4 @@
-import { Route } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 import React, { Component } from 'react';
 import Home from './home/Home';
 import AnimalList from './animal/AnimalList';
@@ -8,8 +8,12 @@ import OwnerList from './owner/OwnerList';
 import AnimalDetail from './animal/AnimalDetail';
 import LocationDetail from './location/LocationDetail';
 import AnimalForm from './animal/AnimalForm';
+import Login from './auth/login';
 
 class ApplicationViews extends Component {
+	//check for login before showing content
+	isAuthenticated = () => localStorage.getItem('credentials') !== null;
+
 	render() {
 		return (
 			<React.Fragment>
@@ -46,7 +50,6 @@ class ApplicationViews extends Component {
 						return <LocationList />;
 					}}
 				/>
-
 				<Route
 					path='/animals/:animalId(\d+)'
 					render={props => {
@@ -69,6 +72,7 @@ class ApplicationViews extends Component {
 						return <AnimalForm {...props} />;
 					}}
 				/>
+				<Route path='/login' component={login} />;
 			</React.Fragment>
 		);
 	}
