@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { firstLetterCase } from "../../modules/helpers";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { firstLetterCase } from '../../modules/helpers';
 
 class AnimalCard extends Component {
 	render() {
@@ -8,7 +8,7 @@ class AnimalCard extends Component {
 			<div className='card'>
 				<div className='card-content'>
 					<picture>
-						<img src={require("./dog.svg")} alt='My Dog' />
+						<img src={require(`../../images/animals/${this.props.animal.id}.jpg`)} alt='My Dog' />
 					</picture>
 					<h3>
 						Name: <span className='card-petname'>{firstLetterCase(this.props.animal.name)}</span>

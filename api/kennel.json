@@ -3,17 +3,38 @@
 		{
 			"id": 1,
 			"name": "doodles",
-			"breed": "Poodle"
+			"breed": "Poodle",
+			"image": "1.jpg"
 		},
 		{
 			"id": 2,
 			"name": "Decker",
-			"breed": "German Sheperd"
+			"breed": "German Sheperd",
+			"image": "2.jpg"
 		},
 		{
 			"id": 3,
 			"name": "esme",
-			"breed": "Pitbull"
+			"breed": "Pitbull",
+			"image": "3.jpg"
+		},
+		{
+			"name": "STEVE THE DOG",
+			"breed": "labradingle",
+			"id": 4,
+			"image": "4.jpg"
+		},
+		{
+			"name": "Fluffles",
+			"breed": "Poop",
+			"id": 5,
+			"image": "5.jpg"
+		},
+		{
+			"name": "Spam",
+			"breed": "mutt",
+			"id": 6,
+			"image": "6.jpg"
 		}
 	],
 	"employees": [
