@@ -6,7 +6,8 @@ class AnimalDetail extends Component {
 	state = {
 		name: '',
 		breed: '',
-		loadingStatus: true
+		loadingStatus: true,
+		noAnimal: true
 	};
 
 	handleDelete = () => {
@@ -23,29 +24,34 @@ class AnimalDetail extends Component {
 				name: animal.name,
 				breed: animal.breed,
 				image: animal.image,
-				loadingStatus: false
+				loadingStatus: false,
+				noAnimal: !animal.name
 			});
 		});
 	}
 
 	render() {
 		if (this.state.loadingStatus) return <p> NOT READY</p>;
-		return (
-			<div className='card'>
-				<div className='card-content'>
-					<picture>
-						<img src={require(`../../images/animals/${this.state.image}`)} alt='My Dog' />
-					</picture>
-					<h3>
-						Name: <span style={{ color: 'darkslategrey' }}>{firstLetterCase(this.state.name)}</span>
-					</h3>
-					<p>Breed: {this.state.breed}</p>
-					<button type='button' disabled={this.state.loadingStatus} onClick={this.handleDelete}>
-						Discharge
-					</button>
+		else if (this.state.noAnimal) return <p>UR ANIMAL IS BYE-BYE</p>;
+		else
+			return (
+				<div className='card'>
+					``
+					<div className='card-content'>
+						<h3>
+							Name: <span style={{ color: 'darkslategrey' }}>{firstLetterCase(this.state.name)}</span>
+						</h3>
+						<picture>
+							<img className='detailsImage' src={require(`../../images/animals/${this.state.image}`)} alt='My Dog' />
+						</picture>
+
+						<p>Breed: {this.state.breed}</p>
+						<button type='button' disabled={this.state.loadingStatus} onClick={this.handleDelete}>
+							Discharge
+						</button>
+					</div>
 				</div>
-			</div>
-		);
+			);
 	}
 }
 

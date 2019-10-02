@@ -8,7 +8,7 @@ class AnimalCard extends Component {
 			<div className='card'>
 				<div className='card-content'>
 					<picture>
-						<img src={require(`../../images/animals/${this.props.animal.id}.jpg`)} alt='My Dog' />
+						<img src={require(`../../images/animals/${this.props.animal.image}`)} alt='My Dog' />
 					</picture>
 					<h3>
 						Name: <span className='card-petname'>{firstLetterCase(this.props.animal.name)}</span>
@@ -16,6 +16,14 @@ class AnimalCard extends Component {
 					<p>Breed: {this.props.animal.breed}</p>
 					<button type='button' onClick={() => this.props.deleteAnimal(this.props.animal.id)}>
 						Discharge
+					</button>
+					<button
+						type='button'
+						onClick={() => {
+							this.props.history.push(`/animals/${this.props.animal.id}/edit`);
+						}}
+					>
+						Edit
 					</button>
 					<Link to={`/animals/${this.props.animal.id}`}>
 						<button>Details</button>

@@ -6,6 +6,7 @@ class AnimalForm extends Component {
 	state = {
 		animalName: '',
 		breed: '',
+		image: '',
 		loadingStatus: false
 	};
 
@@ -19,13 +20,14 @@ class AnimalForm extends Component {
 	 */
 	constructNewAnimal = evt => {
 		evt.preventDefault();
-		if (this.state.animalName === '' || this.state.breed === '') {
-			window.alert('Please input an animal name and breed');
+		if (this.state.animalName === '' || this.state.breed === '' || this.state.image === '') {
+			window.alert('Please input an animal name and breed and image');
 		} else {
 			this.setState({ loadingStatus: true });
 			const animal = {
 				name: this.state.animalName,
-				breed: this.state.breed
+				breed: this.state.breed,
+				image: this.state.image
 			};
 
 			// Create the animal and redirect user to animal list
@@ -43,6 +45,8 @@ class AnimalForm extends Component {
 							<label htmlFor='animalName'>Name</label>
 							<input type='text' required onChange={this.handleFieldChange} id='breed' placeholder='Breed' />
 							<label htmlFor='breed'>Breed</label>
+							<input type='text' required onChange={this.handleFieldChange} id='image' placeholder='image' />
+							<label htmlFor='image'>Image</label>
 						</div>
 						<div className='alignRight'>
 							<button type='button' disabled={this.state.loadingStatus} onClick={this.constructNewAnimal}>

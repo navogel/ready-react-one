@@ -45,3 +45,7 @@
 .card button:hover {
 	background-color: darkblue;
 }
+
+h3 {
+	font-size: 15px;
+}

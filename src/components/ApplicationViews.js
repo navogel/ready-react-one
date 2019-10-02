@@ -9,6 +9,7 @@ import AnimalDetail from './animal/AnimalDetail';
 import LocationDetail from './location/LocationDetail';
 import AnimalForm from './animal/AnimalForm';
 import Login from './auth/login';
+import AnimalEditForm from './animal/AnimalEditForm';
 
 class ApplicationViews extends Component {
 	//check for login before showing content
@@ -71,6 +72,7 @@ class ApplicationViews extends Component {
 					}}
 				/>
 				<Route
+					exact
 					path='/animals/:animalId(\d+)'
 					render={props => {
 						if (this.isAuthenticated()) {
@@ -97,6 +99,16 @@ class ApplicationViews extends Component {
 					render={props => {
 						if (this.isAuthenticated()) {
 							return <AnimalForm {...props} />;
+						} else {
+							return <Redirect to='/login' />;
+						}
+					}}
+				/>
+				<Route
+					path='/animals/:animalId(\d+)/edit'
+					render={props => {
+						if (this.isAuthenticated()) {
+							return <AnimalEditForm {...props} />;
 						} else {
 							return <Redirect to='/login' />;
 						}
