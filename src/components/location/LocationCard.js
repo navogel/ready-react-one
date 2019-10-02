@@ -26,6 +26,14 @@ class LocationCard extends Component {
 					>
 						BURN IT DOWN
 					</button>
+					<button
+						type='button'
+						onClick={() => {
+							this.props.history.push(`/locations/${this.props.local.id}/edit`);
+						}}
+					>
+						Edit
+					</button>
 					<Link to={`/locations/${this.props.local.id}`}>
 						<button>Details</button>
 					</Link>

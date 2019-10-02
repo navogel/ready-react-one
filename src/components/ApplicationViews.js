@@ -12,6 +12,7 @@ import Login from './auth/login';
 import AnimalEditForm from './animal/AnimalEditForm';
 import EmployeeEditForm from './employee/EmployeeEditForm';
 import OwnerEditForm from './owner/OwnerEditForm';
+import LocationEditForm from './location/LocationEditForm';
 
 class ApplicationViews extends Component {
 	//check for login before showing content
@@ -143,6 +144,16 @@ class ApplicationViews extends Component {
 					render={props => {
 						if (this.isAuthenticated()) {
 							return <OwnerEditForm {...props} />;
+						} else {
+							return <Redirect to='/login' />;
+						}
+					}}
+				/>
+				<Route
+					path='/locations/:locationId(\d+)/edit'
+					render={props => {
+						if (this.isAuthenticated()) {
+							return <LocationEditForm {...props} />;
 						} else {
 							return <Redirect to='/login' />;
 						}

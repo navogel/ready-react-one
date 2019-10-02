@@ -58,7 +58,7 @@
     },
     {
       "id": 3,
-      "name": "Sue",
+      "name": "Suey",
       "breed": "Pitbull",
       "image": "1.png"
     }
@@ -78,7 +78,7 @@
     },
     {
       "id": 3,
-      "name": "Will",
+      "name": "Willy",
       "breed": "Husky",
       "image": "2.png"
     }
@@ -86,13 +86,13 @@
   "locations": [
     {
       "id": 1,
-      "name": "E Nashville",
+      "name": "E Nashville2",
       "breed": "hip dogs",
       "image": "1.jpg"
     },
     {
       "id": 2,
-      "name": "Downtown",
+      "name": "Downtown2",
       "breed": "underwalked dogs",
       "image": "1.jpg"
     },
