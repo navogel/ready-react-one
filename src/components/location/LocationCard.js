@@ -20,20 +20,27 @@ class LocationCard extends Component {
 						</span>
 					</h3>
 					<p>Most popular breed: {this.props.local.breed}</p>
-					<button
-						type='button'
-						onClick={() => this.props.deleteLocation(this.props.local.id)}
-					>
-						BURN IT DOWN
-					</button>
-					<button
-						type='button'
-						onClick={() => {
-							this.props.history.push(`/locations/${this.props.local.id}/edit`);
-						}}
-					>
-						Edit
-					</button>
+
+					{this.props.user ? (
+						<>
+							<button
+								type='button'
+								onClick={() => this.props.deleteLocation(this.props.local.id)}
+							>
+								BURN IT DOWN
+							</button>
+							<button
+								type='button'
+								onClick={() => {
+									this.props.history.push(
+										`/locations/${this.props.local.id}/edit`
+									);
+								}}
+							>
+								Edit
+							</button>
+						</>
+					) : null}
 					<Link to={`/locations/${this.props.local.id}`}>
 						<button>Details</button>
 					</Link>

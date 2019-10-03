@@ -26,11 +26,7 @@ class ApplicationViews extends Component {
 					exact
 					path='/'
 					render={props => {
-						if (this.props.user) {
-							return <Home />;
-						} else {
-							return <Redirect to='/login' />;
-						}
+						return <Home />;
 					}}
 				/>
 				<Route
@@ -70,11 +66,7 @@ class ApplicationViews extends Component {
 					exact
 					path='/locations'
 					render={props => {
-						if (this.props.user) {
-							return <LocationList {...props} />;
-						} else {
-							return <Redirect to='/login' />;
-						}
+						return <LocationList {...props} user={this.props.user} />;
 					}}
 				/>
 				<Route
@@ -97,17 +89,13 @@ class ApplicationViews extends Component {
 				<Route
 					path='/locations/:locationId(\d+)'
 					render={props => {
-						if (this.props.user) {
-							// Pass the animalId to the AnimalDetailComponent
-							return (
-								<LocationDetail
-									locationId={parseInt(props.match.params.locationId)}
-									{...props}
-								/>
-							);
-						} else {
-							return <Redirect to='/login' />;
-						}
+						return (
+							<LocationDetail
+								locationId={parseInt(props.match.params.locationId)}
+								{...props}
+								user={this.props.user}
+							/>
+						);
 					}}
 				/>
 				<Route

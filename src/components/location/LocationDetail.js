@@ -52,13 +52,15 @@ class LocationDetail extends Component {
 							</span>
 						</h3>
 						<p>Popular Breed: {this.state.breed}</p>
-						<button
-							type='button'
-							disabled={this.state.loadingStatus}
-							onClick={this.handleDelete}
-						>
-							Shut 'er Down
-						</button>
+						{this.props.user ? (
+							<button
+								type='button'
+								disabled={this.state.loadingStatus}
+								onClick={this.handleDelete}
+							>
+								Shut 'er Down
+							</button>
+						) : null}
 					</div>
 				</div>
 			);

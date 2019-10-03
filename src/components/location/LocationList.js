@@ -32,6 +32,7 @@ class LocationList extends Component {
 
 	render() {
 		console.log('LOCATION LIST: Render');
+		console.log(this.props.user);
 
 		return (
 			<div className='container-cards'>

@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import './NavBar.css';
 
 class NavBar extends Component {
+	handleLogout = () => {
+		this.props.clearUser();
+		this.props.history.push('/');
+	};
+
 	render() {
 		return (
 			<header>
@@ -62,4 +67,4 @@ class NavBar extends Component {
 	}
 }
 
-export default NavBar;
+export default withRouter(NavBar);
