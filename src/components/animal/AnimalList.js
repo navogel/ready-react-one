@@ -10,12 +10,10 @@ class AnimalList extends Component {
 		animals: []
 	};
 
-	deleteAnimal = id => {
-		AnimalManager.delete(id).then(() => {
-			AnimalManager.getAll().then(newAnimals => {
-				this.setState({
-					animals: newAnimals
-				});
+	getData = () => {
+		AnimalManager.getAll().then(newAnimals => {
+			this.setState({
+				animals: newAnimals
 			});
 		});
 	};
@@ -51,7 +49,7 @@ class AnimalList extends Component {
 						<AnimalCard
 							key={animal.id}
 							animal={animal}
-							deleteAnimal={this.deleteAnimal}
+							getData={this.getData}
 							{...this.props}
 						/>
 					))}
