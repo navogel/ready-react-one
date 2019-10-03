@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AnimalManager from '../../modules/AnimalManager';
+import EmployeeManager from '../../modules/EmployeeManager';
 // import "./AnimalForm.css"
 
 class AnimalEditForm extends Component {
@@ -8,6 +9,8 @@ class AnimalEditForm extends Component {
 		animalName: '',
 		breed: '',
 		image: '',
+		employeeId: '',
+		employees: [],
 		loadingStatus: true
 	};
 
@@ -24,19 +27,26 @@ class AnimalEditForm extends Component {
 			id: this.props.match.params.animalId,
 			name: this.state.animalName,
 			breed: this.state.breed,
-			image: this.state.image
+			image: this.state.image,
+			employeeId: parseInt(this.state.employeeId)
 		};
 
-		AnimalManager.update(editedAnimal).then(() => this.props.history.push('/animals'));
+		AnimalManager.update(editedAnimal).then(() =>
+			this.props.history.push('/animals')
+		);
 	};
 
 	componentDidMount() {
-		AnimalManager.get(this.props.match.params.animalId).then(animal => {
-			this.setState({
-				animalName: animal.name,
-				breed: animal.breed,
-				image: animal.image,
-				loadingStatus: false
+		EmployeeManager.getAll().then(allEmployees => {
+			AnimalManager.get(this.props.match.params.animalId).then(animal => {
+				this.setState({
+					animalName: animal.name,
+					breed: animal.breed,
+					image: animal.image,
+					employeeId: animal.employeeId,
+					loadingStatus: false,
+					employees: allEmployees
+				});
 			});
 		});
 	}
@@ -87,6 +97,18 @@ class AnimalEditForm extends Component {
 								Submit
 							</button>
 						</div>
+						<select
+							className='form-control'
+							id='employeeId'
+							value={this.state.employeeId}
+							onChange={this.handleFieldChange}
+						>
+							{this.state.employees.map(employee => (
+								<option key={employee.id} value={employee.id}>
+									{employee.name}
+								</option>
+							))}
+						</select>
 					</fieldset>
 				</form>
 			</>

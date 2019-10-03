@@ -4,43 +4,43 @@
       "id": 1,
       "name": "doodles",
       "breed": "Poodle",
-      "image": "1.jpg"
-    },
-    {
-      "id": 2,
-      "name": "Decker",
-      "breed": "German Sheperd",
-      "image": "4.jpg"
+      "image": "1.jpg",
+      "employeeId": 3
     },
     {
       "id": 3,
       "name": "LILO's DAD",
       "breed": "Pitbull",
-      "image": "3.jpg"
+      "image": "3.jpg",
+      "employeeId": 3
     },
     {
       "name": "LILO's MOM",
       "breed": "labradingle",
       "id": 4,
-      "image": "4.jpg"
+      "image": "4.jpg",
+      "employeeId": 1
     },
     {
+      "id": 5,
       "name": "Fluffles",
       "breed": "Poop",
-      "id": 5,
-      "image": "5.jpg"
+      "image": "5.jpg",
+      "employeeId": 1
     },
     {
+      "id": 6,
       "name": "Spam",
       "breed": "mutt",
-      "id": 6,
-      "image": "6.jpg"
+      "image": "6.jpg",
+      "employeeId": 2
     },
     {
       "id": 7,
       "name": "LILOs Sister",
       "breed": "mutt",
-      "image": "6.jpg"
+      "image": "6.jpg",
+      "employeeId": 1
     }
   ],
   "employees": [

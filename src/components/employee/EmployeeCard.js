@@ -34,6 +34,16 @@ class EmployeeCard extends Component {
 					>
 						Edit
 					</button>
+					<button
+						type='button'
+						onClick={() => {
+							this.props.history.push(
+								`/employees/${this.props.employee.id}/details`
+							);
+						}}
+					>
+						Details
+					</button>
 				</div>
 			</div>
 		);

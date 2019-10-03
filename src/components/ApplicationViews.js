@@ -14,6 +14,7 @@ import EmployeeEditForm from './employee/EmployeeEditForm';
 import OwnerEditForm from './owner/OwnerEditForm';
 import LocationEditForm from './location/LocationEditForm';
 import EmployeeForm from './employee/EmployeeForm';
+import EmployeeWithAnimals from './employee/EmployeeWithAnimals';
 
 class ApplicationViews extends Component {
 	//check for login before showing content
@@ -168,6 +169,12 @@ class ApplicationViews extends Component {
 						} else {
 							return <Redirect to='/login' />;
 						}
+					}}
+				/>
+				<Route
+					path='/employees/:employeeId(\d+)/details'
+					render={props => {
+						return <EmployeeWithAnimals {...props} />;
 					}}
 				/>
 				<Route path='/login' component={Login} />;
