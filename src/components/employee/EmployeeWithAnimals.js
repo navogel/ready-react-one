@@ -8,6 +8,7 @@ class EmployeeWithAnimals extends Component {
 		animals: []
 	};
 
+	//refresh state with current fetch from DB
 	getData = () => {
 		EmployeeManager.getWithAnimals(this.props.match.params.employeeId).then(
 			APIResult => {
@@ -40,6 +41,7 @@ class EmployeeWithAnimals extends Component {
 						key={animal.id}
 						animal={animal}
 						{...this.props}
+						//pass refresh to the card for delete function
 						getData={this.getData}
 					/>
 				))}

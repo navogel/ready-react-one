@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { firstLetterCase } from '../../modules/helpers';
 import AnimalManager from '../../modules/AnimalManager';
+import Button from '@material-ui/core/Button';
 
 class AnimalCard extends Component {
 	handleDelete = id => {
@@ -24,22 +25,26 @@ class AnimalCard extends Component {
 						</span>
 					</h3>
 					<p>Breed: {this.props.animal.breed}</p>
-					<button
-						type='button'
+					<Button
+						variant='contained'
+						color='primary'
 						onClick={() => this.handleDelete(this.props.animal.id)}
 					>
 						Discharge
-					</button>
-					<button
-						type='button'
+					</Button>
+					<Button
+						variant='contained'
+						color='primary'
 						onClick={() => {
 							this.props.history.push(`/animals/${this.props.animal.id}/edit`);
 						}}
 					>
 						Edit
-					</button>
+					</Button>
 					<Link to={`/animals/${this.props.animal.id}`}>
-						<button>Details</button>
+						<Button className='button' variant='contained' color='primary'>
+							Info
+						</Button>
 					</Link>
 				</div>
 			</div>
