@@ -1,105 +1,105 @@
 {
-	"animals": [
-		{
-			"id": 1,
-			"name": "doodles",
-			"breed": "Poodle",
-			"image": "1.jpg",
-			"employeeId": 3
-		},
-		{
-			"id": 3,
-			"name": "LILO's DAD",
-			"breed": "Pitbull",
-			"image": "3.jpg",
-			"employeeId": 3
-		},
-		{
-			"name": "LILO's MOM",
-			"breed": "labradingle",
-			"id": 4,
-			"image": "4.jpg",
-			"employeeId": 1
-		},
-		{
-			"id": 6,
-			"name": "Spam",
-			"breed": "mutt",
-			"image": "6.jpg",
-			"employeeId": 2
-		},
-		{
-			"id": 7,
-			"name": "LILOs Sister",
-			"breed": "mutt",
-			"image": "6.jpg",
-			"employeeId": 1
-		}
-	],
-	"employees": [
-		{
-			"id": 1,
-			"name": "Steve",
-			"breed": "Poodle",
-			"image": "1.png"
-		},
-		{
-			"id": 2,
-			"name": "Sam",
-			"breed": "German Sheperd",
-			"image": "1.png"
-		},
-		{
-			"id": 3,
-			"name": "Suey",
-			"breed": "Pitbull",
-			"image": "1.png"
-		},
-		{
-			"id": 4,
-			"name": "WHAT",
-			"breed": "WHAT2",
-			"image": "1.png"
-		}
-	],
-	"owners": [
-		{
-			"id": 1,
-			"name": "Pony Tail",
-			"breed": "Poodle",
-			"image": "2.png"
-		},
-		{
-			"id": 2,
-			"name": "K10",
-			"breed": "German Sheperd",
-			"image": "2.png"
-		},
-		{
-			"id": 3,
-			"name": "Willy",
-			"breed": "Husky",
-			"image": "2.png"
-		}
-	],
-	"locations": [
-		{
-			"id": 1,
-			"name": "E Nashville2",
-			"breed": "hip dogs",
-			"image": "1.jpg"
-		},
-		{
-			"id": 2,
-			"name": "Downtown2",
-			"breed": "underwalked dogs",
-			"image": "1.jpg"
-		},
-		{
-			"id": 3,
-			"name": "Alaska",
-			"breed": "lifeguard dogs",
-			"image": "1.jpg"
-		}
-	]
+  "animals": [
+    {
+      "id": 1,
+      "name": "doodles",
+      "breed": "Poodle",
+      "image": "1.jpg",
+      "employeeId": 3
+    },
+    {
+      "id": 3,
+      "name": "LILO's DAD",
+      "breed": "Pitbull",
+      "image": "3.jpg",
+      "employeeId": 3
+    },
+    {
+      "name": "LILO's MOM",
+      "breed": "labradingle",
+      "id": 4,
+      "image": "4.jpg",
+      "employeeId": 1
+    },
+    {
+      "id": 6,
+      "name": "Spam",
+      "breed": "mutt",
+      "image": "6.jpg",
+      "employeeId": 2
+    },
+    {
+      "id": 7,
+      "name": "LILOs Sister",
+      "breed": "mutt",
+      "image": "6.jpg",
+      "employeeId": 1
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Steve",
+      "breed": "Poodle",
+      "image": "1.png"
+    },
+    {
+      "id": 2,
+      "name": "Sam",
+      "breed": "German Sheperd",
+      "image": "1.png"
+    },
+    {
+      "id": 3,
+      "name": "Suey",
+      "breed": "Pitbull",
+      "image": "1.png"
+    },
+    {
+      "id": 4,
+      "name": "WHAT",
+      "breed": "WHAT2",
+      "image": "1.png"
+    }
+  ],
+  "owners": [
+    {
+      "id": 1,
+      "name": "Pony Tail",
+      "breed": "Poodle",
+      "image": "2.png"
+    },
+    {
+      "id": 2,
+      "name": "K10",
+      "breed": "German Sheperd",
+      "image": "2.png"
+    },
+    {
+      "id": 3,
+      "name": "Willy",
+      "breed": "Husky",
+      "image": "2.png"
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "E Nashville2",
+      "breed": "hip dogs",
+      "image": "1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Downtown2",
+      "breed": "underwalked dogs",
+      "image": "1.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Alaska",
+      "breed": "lifeguard dogs",
+      "image": "1.jpg"
+    }
+  ]
 }
