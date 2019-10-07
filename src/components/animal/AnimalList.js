@@ -3,10 +3,11 @@ import React, { Component } from 'react';
 import AnimalCard from './AnimalCard';
 import AnimalManager from '../../modules/AnimalManager';
 import './animal.css';
-import Fab from '@material-ui/core/Fab';
-import AddIcon from '@material-ui/icons/Add';
+// import Fab from '@material-ui/core/Fab';
+// import AddIcon from '@material-ui/icons/Add';
 
 import MouseOverPopoverAnimal from '../animal/popover';
+import ButtonAppBar from './AnimalBar';
 
 class AnimalList extends Component {
 	//define what this component needs to render
@@ -37,6 +38,7 @@ class AnimalList extends Component {
 
 		return (
 			<>
+				<ButtonAppBar />
 				<section className='section-content'>
 					<div
 						onClick={() => {
