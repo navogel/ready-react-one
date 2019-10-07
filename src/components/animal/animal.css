@@ -12,11 +12,12 @@
 	padding: 0.5em;
 }
 
-.card-content h3 {
+.cardContent h3 {
 	margin-top: 0;
 	margin-bottom: 0.5em;
 	font-weight: bold;
 	color: rgb(43, 112, 241);
+	padding: 0em;
 }
 
 .card-content p {
@@ -38,7 +39,7 @@
 	background-color: darkblue;
 }
 */ h3 {
-	font-size: 15px;
+	font-size: 15px !important;
 }
 
 a {
@@ -62,6 +63,7 @@ a {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
+	flex-grow: 1;
 }
 
 .animalCardMedia {
