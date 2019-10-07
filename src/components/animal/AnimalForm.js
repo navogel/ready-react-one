@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AnimalManager from '../../modules/AnimalManager';
 import './AnimalForm.css';
+import ButtonAppBar from '../nav/AnimalBar';
 
 class AnimalForm extends Component {
 	state = {
@@ -20,7 +21,11 @@ class AnimalForm extends Component {
 	 */
 	constructNewAnimal = evt => {
 		evt.preventDefault();
-		if (this.state.animalName === '' || this.state.breed === '' || this.state.image === '') {
+		if (
+			this.state.animalName === '' ||
+			this.state.breed === '' ||
+			this.state.image === ''
+		) {
 			window.alert('Please input an animal name and breed and image');
 		} else {
 			this.setState({ loadingStatus: true });
@@ -31,25 +36,50 @@ class AnimalForm extends Component {
 			};
 
 			// Create the animal and redirect user to animal list
-			AnimalManager.post(animal).then(() => this.props.history.push('/animals'));
+			AnimalManager.post(animal).then(() =>
+				this.props.history.push('/animals')
+			);
 		}
 	};
 
 	render() {
 		return (
 			<>
+				<ButtonAppBar {...this.props} page='Onboard a new Animal' />
 				<form>
 					<fieldset>
 						<div className='formgrid'>
-							<input type='text' required onChange={this.handleFieldChange} id='animalName' placeholder='Animal name' />
+							<input
+								type='text'
+								required
+								onChange={this.handleFieldChange}
+								id='animalName'
+								placeholder='Animal name'
+							/>
 							<label htmlFor='animalName'>Name</label>
-							<input type='text' required onChange={this.handleFieldChange} id='breed' placeholder='Breed' />
+							<input
+								type='text'
+								required
+								onChange={this.handleFieldChange}
+								id='breed'
+								placeholder='Breed'
+							/>
 							<label htmlFor='breed'>Breed</label>
-							<input type='text' required onChange={this.handleFieldChange} id='image' placeholder='image' />
+							<input
+								type='text'
+								required
+								onChange={this.handleFieldChange}
+								id='image'
+								placeholder='image'
+							/>
 							<label htmlFor='image'>Image</label>
 						</div>
 						<div className='alignRight'>
-							<button type='button' disabled={this.state.loadingStatus} onClick={this.constructNewAnimal}>
+							<button
+								type='button'
+								disabled={this.state.loadingStatus}
+								onClick={this.constructNewAnimal}
+							>
 								Submit
 							</button>
 						</div>

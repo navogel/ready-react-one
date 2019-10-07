@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AnimalManager from '../../modules/AnimalManager';
 import EmployeeManager from '../../modules/EmployeeManager';
+import ButtonAppBar from '../nav/AnimalBar';
 // import "./AnimalForm.css"
 
 class AnimalEditForm extends Component {
@@ -54,6 +55,7 @@ class AnimalEditForm extends Component {
 	render() {
 		return (
 			<>
+				<ButtonAppBar {...this.props} page={`Edit ${this.state.animalName} `} />
 				<form>
 					<fieldset>
 						<div className='formgrid'>

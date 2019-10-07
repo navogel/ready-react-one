@@ -8,18 +8,6 @@
 	flex: 0 1 24%;
 }
 
-.card-content {
-	padding: 0.5em;
-}
-
-.cardContent h3 {
-	margin-top: 0;
-	margin-bottom: 0.5em;
-	font-weight: bold;
-	color: rgb(43, 112, 241);
-	padding: 0em;
-}
-
 .card-content p {
 	font-size: 80%;
 	color: darkslategrey;
@@ -82,10 +70,20 @@ a {
 	display: flex;
 	flex-direction: column;
 	flex: 1 0 auto;
+	padding: 0.5em 1em 0em 1em !important;
 }
 
 .cardContent > p {
 	flex: 1 0 auto;
+	margin: 0em;
+}
+
+.cardContent h3 {
+	margin-top: 0;
+	margin-bottom: 0em;
+	font-weight: bold;
+	color: rgb(43, 112, 241);
+	padding: 0em;
 }
 
 .cardActionArea {

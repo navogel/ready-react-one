@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AnimalManager from '../../modules/AnimalManager';
 import './AnimalDetail.css';
 import { firstLetterCase } from '../../modules/helpers';
+import ButtonAppBar from '../nav/AnimalBar';
 class AnimalDetail extends Component {
 	state = {
 		name: '',
@@ -37,33 +38,35 @@ class AnimalDetail extends Component {
 		else if (this.state.noAnimal) return <p>UR ANIMAL IS BYE-BYE</p>;
 		else
 			return (
-				<div className='card'>
-					``
-					<div className='card-content'>
-						<h3>
-							Name:{' '}
-							<span style={{ color: 'darkslategrey' }}>
-								{firstLetterCase(this.state.name)}
-							</span>
-						</h3>
-						<picture>
-							<img
-								className='detailsImage'
-								src={require(`../../images/animals/${this.state.image}`)}
-								alt='My Dog'
-							/>
-						</picture>
+				<>
+					<ButtonAppBar {...this.props} page={`${this.state.name}'s Page`} />
+					<div className='card'>
+						<div className='card-content'>
+							<h3>
+								Name:{' '}
+								<span style={{ color: 'darkslategrey' }}>
+									{firstLetterCase(this.state.name)}
+								</span>
+							</h3>
+							<picture>
+								<img
+									className='detailsImage'
+									src={require(`../../images/animals/${this.state.image}`)}
+									alt='My Dog'
+								/>
+							</picture>
 
-						<p>Breed: {this.state.breed}</p>
-						<button
-							type='button'
-							disabled={this.state.loadingStatus}
-							onClick={this.handleDelete}
-						>
-							Discharge
-						</button>
+							<p>Breed: {this.state.breed}</p>
+							<button
+								type='button'
+								disabled={this.state.loadingStatus}
+								onClick={this.handleDelete}
+							>
+								Discharge
+							</button>
+						</div>
 					</div>
-				</div>
+				</>
 			);
 	}
 }
