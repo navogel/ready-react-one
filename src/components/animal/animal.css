@@ -23,6 +23,7 @@
 .card-content p {
 	font-size: 80%;
 	color: darkslategrey;
+	margin: 0em;
 }
 
 .content-petname {

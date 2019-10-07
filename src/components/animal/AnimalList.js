@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import AnimalCard from './AnimalCard';
 import AnimalManager from '../../modules/AnimalManager';
 import './animal.css';
+import Fab from '@material-ui/core/Fab';
+import AddIcon from '@material-ui/icons/Add';
 
 class AnimalList extends Component {
 	//define what this component needs to render
@@ -34,15 +36,15 @@ class AnimalList extends Component {
 		return (
 			<>
 				<section className='section-content'>
-					<button
-						type='button'
-						className='btn'
+					<Fab
+						color='primary'
+						aria-label='add'
 						onClick={() => {
 							this.props.history.push('/animals/new');
 						}}
 					>
-						Admit Animal
-					</button>
+						<AddIcon />
+					</Fab>
 				</section>
 				<div className='container-cards'>
 					{this.state.animals.map(animal => (
