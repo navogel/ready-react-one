@@ -12,6 +12,8 @@ import MailIcon from '@material-ui/icons/Mail';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
+import { Link } from 'react-router-dom';
+
 const useStyles = makeStyles({
 	list: {
 		width: 250
@@ -46,14 +48,46 @@ export default function TemporaryDrawer(props) {
 			onKeyDown={toggleDrawer(side, false)}
 		>
 			<List>
-				{['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-					<ListItem button key={text}>
+				<Link className='nav-link' to='/'>
+					<ListItem button>
 						<ListItemIcon>
-							{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+							<InboxIcon />
 						</ListItemIcon>
-						<ListItemText primary={text} />
+						<ListItemText primary={'Home'} />
 					</ListItem>
-				))}
+				</Link>
+				<Link className='nav-link' to='/animals'>
+					<ListItem button>
+						<ListItemIcon>
+							<InboxIcon />
+						</ListItemIcon>
+						<ListItemText primary={'Animals'} />
+					</ListItem>
+				</Link>
+				<Link className='nav-link' to='/locations'>
+					<ListItem button>
+						<ListItemIcon>
+							<InboxIcon />
+						</ListItemIcon>
+						<ListItemText primary={'Locations'} />
+					</ListItem>
+				</Link>
+				<Link className='nav-link' to='/owners'>
+					<ListItem button>
+						<ListItemIcon>
+							<InboxIcon />
+						</ListItemIcon>
+						<ListItemText primary={'Owners'} />
+					</ListItem>
+				</Link>
+				<Link className='nav-link' to='/employees'>
+					<ListItem button>
+						<ListItemIcon>
+							<InboxIcon />
+						</ListItemIcon>
+						<ListItemText primary={'Employees'} />
+					</ListItem>
+				</Link>
 			</List>
 			<Divider />
 			<List>

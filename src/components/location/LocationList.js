@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 //import the components we will need
 import LocationCard from './LocationCard';
 import LocationManager from '../../modules/LocationManager';
+import ButtonAppBar from '../nav/AnimalBar';
 // import "./location.css";
 
 class LocationList extends Component {
@@ -35,16 +36,19 @@ class LocationList extends Component {
 		console.log(this.props.user);
 
 		return (
-			<div className='container-cards'>
-				{this.state.locations.map(location => (
-					<LocationCard
-						key={location.id}
-						local={location}
-						deleteLocation={this.deleteLocation}
-						{...this.props}
-					/>
-				))}
-			</div>
+			<>
+				<ButtonAppBar {...this.props} page='Locations' />
+				<div className='container-cards'>
+					{this.state.locations.map(location => (
+						<LocationCard
+							key={location.id}
+							local={location}
+							deleteLocation={this.deleteLocation}
+							{...this.props}
+						/>
+					))}
+				</div>
+			</>
 		);
 	}
 }

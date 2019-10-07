@@ -6,13 +6,15 @@ import './animal.css';
 // import Fab from '@material-ui/core/Fab';
 // import AddIcon from '@material-ui/icons/Add';
 
-import MouseOverPopoverAnimal from '../animal/popover';
-import ButtonAppBar from './AnimalBar';
+// import MouseOverPopoverAnimal from '../animal/popover';
+import ButtonAppBar from '../nav/AnimalBar';
+import SimpleMenu from '../nav/AddMenu';
 
 class AnimalList extends Component {
 	//define what this component needs to render
 	state = {
-		animals: []
+		animals: [],
+		cardView: true
 	};
 
 	getData = () => {
@@ -38,14 +40,13 @@ class AnimalList extends Component {
 
 		return (
 			<>
-				<ButtonAppBar {...this.props} />
+				<ButtonAppBar {...this.props} page='Animals' />
 				<section className='section-content'>
-					<div
-						onClick={() => {
-							this.props.history.push('/animals/new');
-						}}
-					>
+					{/* <div>
 						<MouseOverPopoverAnimal />
+					</div> */}
+					<div>
+						<SimpleMenu {...this.props} />
 					</div>
 				</section>
 				<div className='container-cards'>
@@ -55,6 +56,7 @@ class AnimalList extends Component {
 							animal={animal}
 							getData={this.getData}
 							{...this.props}
+							cardView={this.state.cardView}
 						/>
 					))}
 				</div>

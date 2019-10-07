@@ -14,6 +14,7 @@ class AnimalCard extends Component {
 		AnimalManager.delete(id).then(() => this.props.getData());
 	};
 	render() {
+		console.log('card view??', this.props.cardView);
 		return (
 			<Card className='animalCard'>
 				<CardActionArea className='cardActionArea'>

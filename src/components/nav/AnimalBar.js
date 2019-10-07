@@ -4,7 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import AnimalDrawer from '../animal/AnimalDrawer';
+import AnimalDrawer from './AnimalDrawer';
 
 const useStyles = makeStyles(theme => ({
 	root: {
@@ -29,7 +29,7 @@ export default function ButtonAppBar(props) {
 				<Toolbar>
 					<AnimalDrawer taco={props} />
 					<Typography variant='h6' className={classes.title}>
-						Animals
+						{props.page}
 					</Typography>
 					<Button color='inherit'>Login</Button>
 				</Toolbar>
