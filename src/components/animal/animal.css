@@ -88,8 +88,12 @@ a {
 }
 
 .cardActionArea {
-	display: flex;
-	flex-grow: initial;
+	display: flex !important;
+	text-align: inherit !important;
+	justify-content: space-between !important;
+	align-items: inherit !important;
+	flex-grow: 1 !important;
+	flex-direction: column !important;
 }
 
 .cardButtons {
