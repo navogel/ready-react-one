@@ -38,7 +38,7 @@ class AnimalList extends Component {
 
 		return (
 			<>
-				<ButtonAppBar />
+				<ButtonAppBar {...this.props} />
 				<section className='section-content'>
 					<div
 						onClick={() => {
