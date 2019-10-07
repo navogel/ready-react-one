@@ -2,6 +2,7 @@ import { Route, Redirect } from 'react-router-dom';
 import React, { Component } from 'react';
 import Home from './home/Home';
 import AnimalList from './animal/AnimalList';
+// import AnimalListHook from './animal/AnimalListHook';
 import LocationList from './location/LocationList';
 import EmployeeList from './employee/EmployeeList';
 import OwnerList from './owner/OwnerList';
@@ -41,6 +42,17 @@ class ApplicationViews extends Component {
 						}
 					}}
 				/>
+				{/* <Route
+					exact
+					path='/animal'
+					render={props => {
+						if (this.props.user) {
+							return <AnimalListHook {...props} />;
+						} else {
+							return <Redirect to='/login' />;
+						}
+					}}
+				/> */}
 				<Route
 					exact
 					path='/owners'

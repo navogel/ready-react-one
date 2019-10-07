@@ -100,6 +100,6 @@ a {
 .cardButtons {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: flex-end;
 }

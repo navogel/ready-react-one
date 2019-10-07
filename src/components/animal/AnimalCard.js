@@ -51,11 +51,11 @@ class AnimalCard extends Component {
 					>
 						Edit
 					</Button>
-					<Link to={`/animals/${this.props.animal.id}`}>
+					{/* <Link to={`/animals/${this.props.animal.id}`}>
 						<Button size='small' color='primary'>
 							Info
 						</Button>
-					</Link>
+					</Link> */}
 				</CardActions>
 			</Card>
 		);

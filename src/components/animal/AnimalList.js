@@ -6,6 +6,8 @@ import './animal.css';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
 
+import MouseOverPopoverAnimal from '../animal/popover';
+
 class AnimalList extends Component {
 	//define what this component needs to render
 	state = {
@@ -36,15 +38,13 @@ class AnimalList extends Component {
 		return (
 			<>
 				<section className='section-content'>
-					<Fab
-						color='primary'
-						aria-label='add'
+					<div
 						onClick={() => {
 							this.props.history.push('/animals/new');
 						}}
 					>
-						<AddIcon />
-					</Fab>
+						<MouseOverPopoverAnimal />
+					</div>
 				</section>
 				<div className='container-cards'>
 					{this.state.animals.map(animal => (
