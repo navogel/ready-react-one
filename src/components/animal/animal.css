@@ -109,6 +109,16 @@ a {
 	color: rgb(0, 0, 0);
 }
 
-header {
-	margin: 0;
+.addViewRow {
+	display: flex;
+	justify-content: space-between;
+}
+
+.tableIcons {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.editDeleteIcons {
+	text-align: center !important;
 }

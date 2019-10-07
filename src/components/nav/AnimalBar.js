@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
 export default function ButtonAppBar(props) {
 	const classes = useStyles();
 
-	console.log('props from animal list', props);
+	//console.log('props from animal list', props);
 
 	return (
 		<div className={classes.root}>

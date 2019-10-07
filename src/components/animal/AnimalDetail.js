@@ -13,11 +13,13 @@ class AnimalDetail extends Component {
 	handleDelete = () => {
 		//invoke the delete function in AnimalManger and re-direct to the animal list.
 		this.setState({ loadingStatus: true });
-		AnimalManager.delete(this.props.animalId).then(() => this.props.history.push('/animals'));
+		AnimalManager.delete(this.props.animalId).then(() =>
+			this.props.history.push('/animals')
+		);
 	};
 
 	componentDidMount() {
-		console.log('AnimalDetail: ComponentDidMount');
+		//console.log('AnimalDetail: ComponentDidMount');
 		//get(id) from AnimalManager and hang on to that data; put it into state
 		AnimalManager.get(this.props.animalId).then(animal => {
 			this.setState({
@@ -39,14 +41,25 @@ class AnimalDetail extends Component {
 					``
 					<div className='card-content'>
 						<h3>
-							Name: <span style={{ color: 'darkslategrey' }}>{firstLetterCase(this.state.name)}</span>
+							Name:{' '}
+							<span style={{ color: 'darkslategrey' }}>
+								{firstLetterCase(this.state.name)}
+							</span>
 						</h3>
 						<picture>
-							<img className='detailsImage' src={require(`../../images/animals/${this.state.image}`)} alt='My Dog' />
+							<img
+								className='detailsImage'
+								src={require(`../../images/animals/${this.state.image}`)}
+								alt='My Dog'
+							/>
 						</picture>
 
 						<p>Breed: {this.state.breed}</p>
-						<button type='button' disabled={this.state.loadingStatus} onClick={this.handleDelete}>
+						<button
+							type='button'
+							disabled={this.state.loadingStatus}
+							onClick={this.handleDelete}
+						>
 							Discharge
 						</button>
 					</div>

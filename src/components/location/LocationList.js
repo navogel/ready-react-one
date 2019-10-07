@@ -22,7 +22,7 @@ class LocationList extends Component {
 	};
 
 	componentDidMount() {
-		console.log('LOCATION LIST: ComponentDidMount');
+		//console.log('LOCATION LIST: ComponentDidMount');
 		//getAll from LocationManager and hang on to that data; put it in state
 		LocationManager.getAll().then(locations => {
 			this.setState({
@@ -32,8 +32,8 @@ class LocationList extends Component {
 	}
 
 	render() {
-		console.log('LOCATION LIST: Render');
-		console.log(this.props.user);
+		//console.log('LOCATION LIST: Render');
+		//console.log(this.props.user);
 
 		return (
 			<>

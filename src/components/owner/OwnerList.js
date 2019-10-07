@@ -21,7 +21,7 @@ class OwnerList extends Component {
 	};
 
 	componentDidMount() {
-		console.log('OWNER LIST: ComponentDidMount');
+		//console.log('OWNER LIST: ComponentDidMount');
 		//getAll from OwnerManager and hang on to that data; put it in state
 		OwnerManager.getAll().then(owners => {
 			this.setState({
@@ -31,7 +31,7 @@ class OwnerList extends Component {
 	}
 
 	render() {
-		console.log('OWNER LIST: Render');
+		//console.log('OWNER LIST: Render');
 
 		return (
 			<div className='container-cards'>

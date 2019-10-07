@@ -5,7 +5,9 @@ export default {
 		return fetch(`${remoteURL}/animals/${id}`).then(result => result.json());
 	},
 	getAll() {
-		return fetch(`${remoteURL}/animals`).then(result => result.json());
+		return fetch(`${remoteURL}/animals?_expand=employee`).then(result =>
+			result.json()
+		);
 	},
 	delete(id) {
 		return fetch(`${remoteURL}/animals/${id}`, {

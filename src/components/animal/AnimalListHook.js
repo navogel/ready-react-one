@@ -23,7 +23,7 @@ const AnimalListHook = props => {
 		});
 	});
 
-	console.log(animals);
+	//console.log(animals);
 
 	return (
 		<>

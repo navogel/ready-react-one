@@ -16,7 +16,7 @@ export default function SimpleMenu(props) {
 		setAnchorEl(null);
 	};
 
-	console.log('menu props from animal list', props);
+	//console.log('menu props from animal list', props);
 
 	return (
 		<div>

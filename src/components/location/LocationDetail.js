@@ -20,7 +20,7 @@ class LocationDetail extends Component {
 	};
 
 	componentDidMount() {
-		console.log('LocationDetail: ComponentDidMount');
+		//console.log('LocationDetail: ComponentDidMount');
 		LocationManager.get(this.props.locationId).then(location => {
 			this.setState({
 				name: location.name,

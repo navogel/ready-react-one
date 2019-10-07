@@ -21,7 +21,7 @@ class EmployeeList extends Component {
 	};
 
 	componentDidMount() {
-		console.log('EMPLOYEE LIST: ComponentDidMount');
+		//console.log('EMPLOYEE LIST: ComponentDidMount');
 		//getAll from EmployeeManager and hang on to that data; put it in state
 		EmployeeManager.getAll().then(employees => {
 			this.setState({
@@ -31,7 +31,7 @@ class EmployeeList extends Component {
 	}
 
 	render() {
-		console.log('EMPLOYEE LIST: Render');
+		//console.log('EMPLOYEE LIST: Render');
 
 		return (
 			<>

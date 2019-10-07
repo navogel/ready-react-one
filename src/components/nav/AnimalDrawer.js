@@ -103,7 +103,7 @@ export default function TemporaryDrawer(props) {
 		</div>
 	);
 
-	console.log('props from nav bar', props);
+	//console.log('props from nav bar', props);
 
 	return (
 		<div>
