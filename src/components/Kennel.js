@@ -6,7 +6,7 @@ import './Kennel.css';
 
 class Kennel extends Component {
 	state = {
-		user: false
+		user: localStorage.getItem('credentials') !== null
 	};
 
 	// Check if credentials are in local storage
@@ -24,11 +24,11 @@ class Kennel extends Component {
 		});
 	};
 
-	componentDidMount() {
-		this.setState({
-			user: this.isAuthenticated()
-		});
-	}
+	// componentDidMount() {
+	// 	this.setState({
+	// 		user: this.isAuthenticated()
+	// 	});
+	// }
 
 	clearUser = () => {
 		localStorage.clear();

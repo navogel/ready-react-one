@@ -48,9 +48,3 @@ img {
 .section-content {
 	padding: 1.4em;
 }
-
-.container-cards {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}

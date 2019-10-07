@@ -20,6 +20,7 @@ class ApplicationViews extends Component {
 	//check for login before showing content
 
 	render() {
+		console.log(this.props.user);
 		return (
 			<React.Fragment>
 				<Route

@@ -44,3 +44,55 @@
 a {
 	text-decoration: none;
 }
+
+@media all and (min-width: 40em) {
+	.animalCard {
+		width: 50%;
+	}
+}
+@media all and (min-width: 60em) {
+	.animalCard {
+		width: 33.33%;
+	}
+}
+
+.animalCard {
+	max-width: 345px;
+	margin: 1em;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.animalCardMedia {
+	height: 140px;
+}
+
+.container-cards {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.cardContent {
+	display: flex;
+	flex-direction: column;
+	flex: 1 0 auto;
+}
+
+.cardContent > p {
+	flex: 1 0 auto;
+}
+
+.cardActionArea {
+	display: flex;
+	flex-grow: initial;
+}
+
+.cardButtons {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-end;
+}
