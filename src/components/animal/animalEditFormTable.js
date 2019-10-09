@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import AnimalManager from '../../modules/AnimalManager';
 import EmployeeManager from '../../modules/EmployeeManager';
 
-// import "./AnimalForm.css"
-
-class AnimalEditForm extends Component {
+class AnimalEditFormTable extends Component {
 	//set the initial state
 	state = {
 		animalName: '',
@@ -33,7 +31,7 @@ class AnimalEditForm extends Component {
 		};
 
 		AnimalManager.update(editedAnimal).then(() => {
-			this.props.props.getData();
+			this.props.props.props.getData();
 			this.props.onClose();
 		});
 	};
@@ -118,4 +116,4 @@ class AnimalEditForm extends Component {
 	}
 }
 
-export default AnimalEditForm;
+export default AnimalEditFormTable;

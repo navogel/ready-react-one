@@ -8,6 +8,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
+import EditAnimalModal from '../animal/editanimalModal';
 
 //table
 
@@ -45,17 +46,7 @@ class AnimalCard extends Component {
 						>
 							Discharge
 						</Button>
-						<Button
-							size='small'
-							color='primary'
-							onClick={() => {
-								this.props.history.push(
-									`/animals/${this.props.animal.id}/edit`
-								);
-							}}
-						>
-							Edit
-						</Button>
+						<EditAnimalModal id={this.props.animal.id} {...this.props} />
 						{/* <Link to={`/animals/${this.props.animal.id}`}>
 						<Button size='small' color='primary'>
 							Info

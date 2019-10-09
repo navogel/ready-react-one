@@ -6,11 +6,11 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import EditIcon from '@material-ui/icons/EditOutlined';
 import DeleteIcon from '@material-ui/icons/DeleteOutlined';
 import AnimalManager from '../../modules/AnimalManager';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import IconButton from '@material-ui/core/IconButton';
+import EditAnimalModalTable from '../animal/editanimalModalTable';
 
 const useStyles = makeStyles(theme => ({
 	root: {
@@ -25,7 +25,6 @@ const useStyles = makeStyles(theme => ({
 
 export default function SimpleTable(props) {
 	const classes = useStyles();
-	console.log('propspy props from animal list', props);
 	const handleDelete = id => {
 		AnimalManager.delete(id).then(() => props.getData());
 	};
@@ -48,14 +47,7 @@ export default function SimpleTable(props) {
 						<TableRow key={animal.name}>
 							<TableCell component='th' scope='row'>
 								<div className='tableIcons'>
-									<IconButton
-										aria-label='edit'
-										onClick={() => {
-											props.history.push(`/animals/${animal.id}/edit`);
-										}}
-									>
-										<EditIcon />
-									</IconButton>
+									<EditAnimalModalTable id={animal.id} props={props} />
 									<IconButton
 										aria-label='delete'
 										onClick={() => handleDelete(animal.id)}
